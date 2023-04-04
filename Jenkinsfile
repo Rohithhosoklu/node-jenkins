@@ -1,22 +1,19 @@
 pipeline {
     agent any
-    
-    stages{
-        stage('Code'){
-            steps{
-                    script
-                    {
-                        git clone 'https://github.com/Rohithhosoklu/node-jenkins.git' 
-                    }
-                 }
-        }
-        stage('Deploy'){
-            steps
+    stages {
+        stage('Clone repository')
+        {
+            steps 
             {
-                script
-                {
-                    sh "docker compose down && docker compose up -d"
-                }   
+                git branch: 'main', url: 'https://github.com/your-repository.git'
+            }
+        }
+        stage('Build and run Docker Compose') 
+        {
+            steps 
+            {
+                sh 'docker compose build'
+                sh 'docker compose up -d'
             }
         }
     }
