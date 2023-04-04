@@ -7,7 +7,7 @@ pipeline {
             {
                 script
                 {
-                    git branch: 'main', url: 'https://github.com/your-repository.git'
+                    git branch: 'master', url: 'https://github.com/Rohithhosoklu/node-jenkins.git'
                 }
             }
         }
