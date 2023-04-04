@@ -1,5 +1,5 @@
-FROM node:12.2.0-alpine
-WORKDIR app
+FROM node:16.20.0-alpine3.17
+WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm run test
