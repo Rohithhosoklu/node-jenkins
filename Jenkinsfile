@@ -6,7 +6,7 @@ pipeline {
             steps{
                     script
                     {
-                        git branch: 'master', url: 'https://github.com/Rohithhosoklu/node-jenkins.git' 
+                        git clone 'https://github.com/Rohithhosoklu/node-jenkins.git' 
                     }
                  }
         }
@@ -15,7 +15,7 @@ pipeline {
             {
                 script
                 {
-                    sh "docker-compose down && docker-compose up -d"
+                    sh "docker compose down && docker compose up -d"
                 }   
             }
         }
