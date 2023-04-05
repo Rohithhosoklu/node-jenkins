@@ -11,7 +11,7 @@ pipeline {
                 }
             }
         }
-        stage('Build and run Docker Compose') 
+        stage('Build and run the container using Docker Compose') 
         {
             steps 
             {
