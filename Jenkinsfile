@@ -18,6 +18,7 @@ pipeline {
                 script
                 {
                     sh 'docker compose down'
+                    sh 'docker rmi -f myapp'
                     sh 'docker compose up -d'
                 }
             }

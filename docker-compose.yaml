@@ -7,7 +7,7 @@ services:
     image: myapp
     container_name: myapp
     ports:
-      - "${PORT}:8000"
+      - "8000:8000"
     environment:
       - NODE_ENV=${NODE_ENV}
     networks:
